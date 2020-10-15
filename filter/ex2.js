@@ -26,6 +26,7 @@ Expected OUTPUT for this sample:
 */
 
 function keepStarks(names) {
+  return names.filter(name => name.split(' ')[1] === 'Stark')
 }
 
 // DON'T TOUCH THIS!

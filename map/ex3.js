@@ -62,7 +62,30 @@ Expected OUTPUT for this sample:
  */
 
 function getMoviesFreshness(movies) {
-}
+/*
+  * If `rating` is STRICTLY below 60, the value to assign to `label` is "rotten".
+  * If `rating` is between 60 and 75 (included), the value to assign to `label` is "fresh".
+  * If `rating` STRICTLY above 75, the value to assign to `label` is "certified fresh".
+  */
+    return movies.map(function (movie){  //attention ici
+        //Je dois prendre la note
+        if (  movie.rating<60 ){
+          movie.label = "rotten";
+        }
+        else if( movie.rating<75 ){
+          movie.label= "fresh";
+        }
+        else{
+          movie.label= "certified fresh";
+        }
+        return movie
+    }
+    )
+
+    
+  }
+
+
 
 
 
